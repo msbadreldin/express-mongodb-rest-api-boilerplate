@@ -1,6 +1,6 @@
 import { ClientSession, ObjectId } from 'mongoose'
 
-import { User } from '@/models'
+import { User } from '@/common/models'
 
 export const userService = {
   create: (

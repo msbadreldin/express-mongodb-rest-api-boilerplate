@@ -2,15 +2,15 @@ import express, { Express } from 'express'
 import { join } from 'path'
 import 'dotenv/config'
 
-import '@/infrastructure/logger'
-import { mongoose, redis } from '@/dataSources'
+import '@/common/infrastructure/logger'
+import { mongoose, redis } from '@/common/dataSources'
 import {
   corsMiddleware,
   authMiddleware,
   notFoundMiddleware
-} from '@/middlewares'
+} from '@/common/middlewares'
 import { router } from '@/routes'
-import { i18next, i18nextHttpMiddleware } from '@/i18n'
+import { i18next, i18nextHttpMiddleware } from '@/common/i18n'
 
 mongoose.run()
 redis.run()
@@ -32,4 +32,6 @@ app.use(
   notFoundMiddleware
 )
 
-app.listen(process.env.APP_PORT)
+app.listen(process.env.APP_PORT, () => {
+  console.log(`Server is running on port ${process.env.APP_PORT}`)
+})

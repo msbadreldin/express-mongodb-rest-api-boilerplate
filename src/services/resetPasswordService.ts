@@ -1,7 +1,7 @@
 import { ClientSession, ObjectId } from 'mongoose'
 
-import { ResetPassword } from '@/models'
-import { createDateNow } from '@/utils/dates'
+import { ResetPassword } from '@/common/models'
+import { createDateNow } from '@/common/utils/dates'
 
 export const resetPasswordService = {
   create: (

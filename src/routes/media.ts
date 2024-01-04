@@ -1,8 +1,8 @@
 import { Router } from 'express'
 
-import { authGuard } from '@/guards'
+import { authGuard } from '@/common/guards'
 import { mediaController } from '@/controllers'
-import { uploadSingleImageMiddleware } from '@/middlewares'
+import { uploadSingleImageMiddleware } from '@/common/middlewares'
 
 export const media = (router: Router): void => {
   router.post(

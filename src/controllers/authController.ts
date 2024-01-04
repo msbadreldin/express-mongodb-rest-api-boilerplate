@@ -3,30 +3,30 @@ import { startSession } from 'mongoose'
 import { StatusCodes, ReasonPhrases } from 'http-status-codes'
 import winston from 'winston'
 
-import { ExpiresInDays } from '@/constants'
+import { ExpiresInDays } from '@/common/constants'
 import {
   NewPasswordPayload,
   ResetPasswordPayload,
   SignInPayload,
   SignUpPayload
-} from '@/contracts/auth'
+} from '@/common/contracts/auth'
 import {
   resetPasswordService,
   verificationService,
   userService
 } from '@/services'
-import { jwtSign } from '@/utils/jwt'
+import { jwtSign } from '@/common/utils/jwt'
 import {
   IBodyRequest,
   ICombinedRequest,
   IContextRequest,
   IUserRequest
-} from '@/contracts/request'
-import { createCryptoString } from '@/utils/cryptoString'
-import { createDateAddDaysFromNow } from '@/utils/dates'
-import { UserMail } from '@/mailer'
-import { createHash } from '@/utils/hash'
-import { redis } from '@/dataSources'
+} from '@/common/contracts/request'
+import { createCryptoString } from '@/common/utils/cryptoString'
+import { createDateAddDaysFromNow } from '@/common/utils/dates'
+import { UserMail } from '@/common/mailer'
+import { createHash } from '@/common/utils/hash'
+import { redis } from '@/common/dataSources'
 
 export const authController = {
   signIn: async (

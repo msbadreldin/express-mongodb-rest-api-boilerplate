@@ -8,28 +8,28 @@ import {
   IContextRequest,
   IParamsRequest,
   IUserRequest
-} from '@/contracts/request'
+} from '@/common/contracts/request'
 import {
   DeleteProfilePayload,
   UpdateEmailPayload,
   UpdatePasswordPayload,
   UpdateProfilePayload,
   VerificationRequestPayload
-} from '@/contracts/user'
+} from '@/common/contracts/user'
 import {
   mediaService,
   resetPasswordService,
   userService,
   verificationService
 } from '@/services'
-import { ExpiresInDays, MediaRefType } from '@/constants'
-import { createDateAddDaysFromNow } from '@/utils/dates'
-import { createCryptoString } from '@/utils/cryptoString'
-import { UserMail } from '@/mailer'
-import { jwtSign } from '@/utils/jwt'
-import { createHash } from '@/utils/hash'
-import { Image } from '@/infrastructure/image'
-import { appUrl } from '@/utils/paths'
+import { ExpiresInDays, MediaRefType } from '@/common/constants'
+import { createDateAddDaysFromNow } from '@/common/utils/dates'
+import { createCryptoString } from '@/common/utils/cryptoString'
+import { UserMail } from '@/common/mailer'
+import { jwtSign } from '@/common/utils/jwt'
+import { createHash } from '@/common/utils/hash'
+import { Image } from '@/common/infrastructure/image'
+import { appUrl } from '@/common/utils/paths'
 
 export const userController = {
   me: async (

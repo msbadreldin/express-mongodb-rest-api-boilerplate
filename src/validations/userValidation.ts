@@ -4,14 +4,14 @@ import validator from 'validator'
 import { StatusCodes, ReasonPhrases } from 'http-status-codes'
 import winston from 'winston'
 
-import { IBodyRequest } from '@/contracts/request'
+import { IBodyRequest } from '@/common/contracts/request'
 import {
   DeleteProfilePayload,
   UpdateEmailPayload,
   UpdatePasswordPayload,
   UpdateProfilePayload,
   VerificationRequestPayload
-} from '@/contracts/user'
+} from '@/common/contracts/user'
 
 export const userValidation = {
   verificationRequest: (

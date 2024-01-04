@@ -3,9 +3,9 @@ import { ReasonPhrases, StatusCodes } from 'http-status-codes'
 import winston from 'winston'
 
 import { mediaService } from '@/services'
-import { Image } from '@/infrastructure/image'
-import { IContextRequest, IUserRequest } from '@/contracts/request'
-import { appUrl } from '@/utils/paths'
+import { Image } from '@/common/infrastructure/image'
+import { IContextRequest, IUserRequest } from '@/common/contracts/request'
+import { appUrl } from '@/common/utils/paths'
 
 export const mediaController = {
   imageUpload: async (

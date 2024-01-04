@@ -1,7 +1,7 @@
 import { Router } from 'express'
 
 import { authController } from '@/controllers'
-import { authGuard } from '@/guards'
+import { authGuard } from '@/common/guards'
 import { authValidation } from '@/validations'
 
 export const auth = (router: Router): void => {

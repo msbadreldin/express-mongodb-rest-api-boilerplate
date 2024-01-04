@@ -1,6 +1,6 @@
 import { Router } from 'express'
 
-import { authGuard } from '@/guards'
+import { authGuard } from '@/common/guards'
 import { userController } from '@/controllers'
 import { userValidation } from '@/validations'
 

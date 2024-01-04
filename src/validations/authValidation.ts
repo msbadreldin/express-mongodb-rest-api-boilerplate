@@ -8,8 +8,8 @@ import {
   SignInPayload,
   SignUpPayload,
   NewPasswordPayload
-} from '@/contracts/auth'
-import { IBodyRequest } from '@/contracts/request'
+} from '@/common/contracts/auth'
+import { IBodyRequest } from '@/common/contracts/request'
 
 export const authValidation = {
   signIn: (
